@@ -1,0 +1,73 @@
+<div class="center-content">
+    <h1>Submit Tax Filing</h1>
+</div>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <h3>1.Tax Filing Detail</h3>
+            <hr>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-3 col-md-3">
+                        <label>Type of filing </label> 
+                    </div>
+                    <div class="col-3">
+                        <p>{{filingptype}}</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-3 col-md-3">
+                            <label for="month">Vat Month</label>
+                        </div>
+                        <div class="col-3 col-md-3">
+                            <p>{{month}} {{year}}</p>
+                        </div >
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <h3>2.Tax Computation</h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-9 col-md-9">
+                            <h6>Total value of taxable electronic service exclusive of VAT</h6>
+                        </div>
+                        <div class="col-3 col-md-3">
+                            <p>{{saleAmount}} THB</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-9 col-md-9">
+                            <h6>Total VAT to be remitted</h6>
+                            <p>(7% of Total value of taxable electronic service exclusive of VAT)</p>
+                        </div>
+                        <div class="col-3 col-md-3">
+                            <p>{{totalAmount}} THB</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-9 col-md-9">
+                            <h6>Total Amount Payable</h6>
+                        </div>
+                        <div class="col-3 col-md-3">
+                            <p>{{totalAmount}} THB</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <h3>Declaration</h3>
+                        <hr>
+                        <p>I hereby certity that information given above are true and correct and agree to be bound by
+                            such information</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-center">
+    <button type="submit" class="btn btn-success">Next</button>
+</div>

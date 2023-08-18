@@ -1,0 +1,47 @@
+.center-content {
+    text-align: center;
+    /* height: 100vh; ให้กล่องเต็มความสูงของหน้าจอ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px;
+}
+
+.container {
+    max-width: 720px;
+    margin: auto;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+
+p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+button:last-child {
+    background-color: #28A745;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

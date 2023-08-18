@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-xs-3">
+        <label class="radio-container">
+            <input type="radio" id="Ordinary" name="type" class="radio-input" value="0" (click)="onRadioClick('0')" [checked]="selectedValue === '0'">
+            <span class="radio-dot"></span> Ordinary Filing
+        </label>
+    </div>
+    <div class="col-xs-3">
+        <label class="radio-container">
+            <input type="radio" id="Additional" name="type" class="radio-input" value="1" (click)="onRadioClick('1')" [checked]="selectedValue === '1'">
+            <span class="radio-dot"></span> Additional Filing
+        </label>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="center-content">
+    <h1>Submit Tax Filing</h1>
+</div>
+<div class="container mt-4">
+    <div class="row">
+            <h3>1.Tax Filing Detail</h3>
+            <hr>
+            <div class="form-group">
+                <label for="filingType">Type of filing <span class="text-danger">*</span></label>
+                <div class="form-check">
+                    <app-filing-type (selectedValueOutput)="setType($event)" ></app-filing-type>
+                </div>
+                <div class="form-group">
+                    <div class="">
+                        <div class="">
+                            <label for="month">Vat Month <span class="text-danger">*</span></label>
+                        </div>
+                        <div class="row">
+                            <div class="col-9 col-md-3">
+                                <app-month (monthOutput)="getmountValue($event)"></app-month>
+                            </div>
+                            <div class="col-3 col-md-3">
+                                <app-year (yearOutput)="getyearValue($event)"></app-year>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <h3>2.Tax Computation</h3>
+                    <hr>
+                    <p>provide total value taxable electronic service <span class="text-danger">*</span></p>
+                    <app-sale-amount (totalValueChange)="getvatTotalValue($event)" (saleAmountOutput)="getSaleAmount($event)"></app-sale-amount>
+                    <app-tax-amount [totalValue]="totalval" (sendTaxToSurcharge)="updateSurcharge($event)"
+                        (sendTaxToTotal)="updateTotal($event)" (taxamountOutput)="getTaxAmount($event)"></app-tax-amount>
+                </div>
+
+                <div *ngIf="DataType === '1'">
+                    <h6>in case late fitting and payment, or addittional fitting</h6>
+                    <app-surcharge [TaxAmountOutput]="taxAmountOutput"
+                        (sendTaxToTotal)="updateTotal($event)" (surchargeOutput)="getsurcharge($event)"></app-surcharge>
+                    <app-penalty (penaltytoTotal)="updateTotal($event)" (penaltyOutput)="getPenalty($event)"></app-penalty>
+                    <app-total-amount [total]="totalValue" (totalAmountOutput)="gettotalAmount($event)"></app-total-amount>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="text-center">
+    <button type="submit" class="btn btn-success" (click)="goToRenavigateToReview()">Next</button>
+</div>

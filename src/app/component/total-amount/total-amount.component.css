@@ -1,0 +1,22 @@
+.input-container {
+    position: relative;
+}
+
+.input-with-placeholder {
+    padding-right: 40px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.flex-container p {
+    margin-right: auto;
+}
+
+.flex-container input {
+    width: 150px;
+    text-align: right;
+}

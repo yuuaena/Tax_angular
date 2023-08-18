@@ -1,0 +1,19 @@
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.col-xs-3 {
+    width: calc(33.33% - 10px);
+    /* padding: 0 5px;
+     */
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    /* จัดเรียงตามแนวตั้ง */
+    gap: 40px;
+    /* กำหนดระยะห่างระหว่างตัวเลือก */
+}
